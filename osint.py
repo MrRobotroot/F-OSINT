@@ -95,8 +95,9 @@ def main_menu():
             console.print("[bold red]Çıkılıyor...[/bold red]")
             break
         else:
-            console.print("[red]Yanlış seçenek![/red]")
-        input("\n[bold cyan]Press Enter to return to menu...[/bold cyan]")
+            console.print("[red]Yanlış seçenek![/red]")  
+console.print("\n[bold cyan]Menüye geri dönmek için enter basın...[/bold cyan]")  
+input()  
 
 if __name__ == "__main__":
     main_menu()
