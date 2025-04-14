@@ -1,2 +1,2 @@
-# F-OSINT
-Termux ve kali için OSİNT aracı.
+# 🚀 Termux OSINT Aracı
+## 👤 Kullanıcı Arama | 🌍 IP Sorgu | 🌐 Domain Lookup
