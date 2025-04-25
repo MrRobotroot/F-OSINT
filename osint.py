@@ -6,7 +6,7 @@ from rich.console import Console
 from rich.panel import Panel
 from time import sleep
 import urllib.parse
-import webbrowser  # Web tarayıcıyı açabilmek için modül eklendi
+import webbrowser  
 
 console = Console()
 
@@ -76,7 +76,7 @@ def domain_lookup():
     except:
         console.print("[red] DNS denetleme başarısız.[/red]")
 
-# Google Dorking Fonksiyonu
+
 def google_dork():
     query = console.input("\n[bold cyan]> Dork sorgusunu girin (örneğin: site:instagram.com intitle:kullaniciadi intext:kullaniciadi inurl:kullaniciadi): [/bold cyan]")
     search_url = f"https://www.google.com/search?q={urllib.parse.quote(query)}"
@@ -92,7 +92,7 @@ def google_dork():
     except Exception as e:
         console.print(f"[red][!] Bağlantı hatası: {e}[/red]")
 
-# Yeni Fonksiyon - Kullanıcı Adı ile Google'da Arama
+
 def google_username_search():
     kullanici_adi = console.input("\n[bold cyan]> Kullanıcı adını girin: [/bold cyan]")
     url = f'https://www.google.com/search?q=site:"instagram.com"+intext:"{kullanici_adi}"'
@@ -100,7 +100,7 @@ def google_username_search():
     console.print(f"\n[bold yellow] Aranıyor:[/bold yellow] [bold white]{kullanici_adi}[/bold white] için Google araması başlatılıyor...")
 
     try:
-        # Google'a GET isteği gönderilir ve durum kodu kontrol edilir
+       ir
         res = requests.get(url, timeout=10)
         if res.status_code == 200:
             console.print(f"[green][+] Google araması başarılı! Yeni sekmede açılıyor...[/green]")
@@ -132,7 +132,7 @@ def main_menu():
         elif choice == "4":
             google_dork()
         elif choice == "5":
-            google_username_search()  # Kullanıcı adı arama fonksiyonu çağrılır
+            google_username_search()  
         elif choice == "6":
             console.print("[bold red]Çıkılıyor...[/bold red]")
             break
